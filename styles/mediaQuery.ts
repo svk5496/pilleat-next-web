@@ -7,25 +7,25 @@
  * */
 
 export const Breakpoint = {
-  mobile: 540,
-  tablet: 992,
-  desktop: 1200,
-  desktopSmall: 1440,
-  desktopLarge: 1920,
+  mobile: "540px",
+  tablet: "992px",
+  desktop: "1200px",
+  desktopSmall: "1440px",
+  desktopLarge: "1920px",
 };
 
-const breakpoints: Array<number> = [0, 540, 992, 1440, 1920];
+// const breakpoints: Array<number> = [0, 540, 992, 1440, 1920];
 
-const Breakpoints = {
-  mobile: 0,
-  tablet: 1,
-  desktop_sm: 2,
-  desktop: 3,
-  desktop_lg: 4,
-};
+// const Breakpoints = {
+//   mobile: 0,
+//   tablet: 1,
+//   desktop_sm: 2,
+//   desktop: 3,
+//   desktop_lg: 4,
+// };
 
-function mq(size: number): string {
-  return `@media screen and (min-width: ${breakpoints[size]}px)`;
-}
+// function mq(size: number): string {
+//   return `@media screen and (min-width: ${breakpoints[size]}px)`;
+// }
 
-export { mq, Breakpoints };
+// export { mq, Breakpoints };

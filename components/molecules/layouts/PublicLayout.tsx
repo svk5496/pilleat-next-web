@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import AdminSideBar from "../bars/AdminSideBar";
-import GNB from "../bars/GlobalNavigationBar";
+import GNB from "../bars/GNB";
 
 const Base = styled.div`
   width: 100%;

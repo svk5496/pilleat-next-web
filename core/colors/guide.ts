@@ -3,17 +3,30 @@ export const white = "#FFFFFF";
 export const red = "#FF3B30";
 export const darkRed = "#E5342B";
 export const black = "#000000";
+export const blue = "#3478FF";
+export const darkBlue = "#1A44B7";
 
-// primary
-export const primary100 = "#F5F8FF";
-export const primary200 = "#D7E9FF";
-export const primary300 = "#ADD1FF";
-export const primary400 = "#84B6FF";
-export const primary500 = "#3478FF";
-export const primary600 = "#1E50FF";
-export const primary700 = "#1A44B7";
-export const primary800 = "#09207A";
-export const primary900 = "#30313A";
+// primary blue
+// export const primary100 = "#F5F8FF";
+// export const primary200 = "#D7E9FF";
+// export const primary300 = "#ADD1FF";
+// export const primary400 = "#84B6FF";
+// export const primary500 = "#3478FF";
+// export const primary600 = "#1E50FF";
+// export const primary700 = "#1A44B7";
+// export const primary800 = "#09207A";
+// export const primary900 = "#30313A";
+
+// primary green
+export const primary100 = "#A5F4A0";
+export const primary200 = "#6CEF64";
+export const primary300 = "#39E532";
+export const primary400 = "#11D70D";
+export const primary500 = "#00C400";
+export const primary600 = "#01A900";
+export const primary700 = "#018600";
+export const primary800 = "#015F00";
+export const primary900 = "#013600";
 
 // gray
 export const grayscale100 = "#FAFAFA";
