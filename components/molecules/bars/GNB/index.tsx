@@ -1,8 +1,9 @@
-import { ButtonText } from "@/components/atoms/Button/Text/Index";
 import { theme } from "@/core/colors/theme";
 import { Breakpoint } from "@/styles/mediaQuery";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
+import GNBMenu from "../../menu";
+import { FlexRowBox } from "@/components/atoms/layouts";
 
 const Base = styled.div`
   width: 100%;
@@ -46,35 +47,6 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const SubMenuWeb = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 0px 20px;
-  display: flex;
-`;
-
-interface MenuProp {
-  isSelected: boolean;
-}
-
-const Menu = styled.p<MenuProp>`
-  height: 100% - 1px;
-  width: 60px;
-  margin: 0px 10px;
-  vertical-align: center;
-  padding: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  border-bottom: 4px solid
-    ${(props) => (props.isSelected ? theme.lightTheme.primary : "transparant")};
-  :hover {
-    color: ${theme.lightTheme.primary};
-  }
-`;
-
 const AuthWrapper = styled.div`
   width: 30%;
   min-width: 220px;
@@ -85,34 +57,32 @@ const AuthWrapper = styled.div`
 `;
 
 interface GNBProps {
-  variant?: "home" | "nutrient" | "healthGoal";
+  variant?: string;
 }
 
-export default function GNB({ variant = "home" }: GNBProps) {
+export default function GNB({ variant = "/" }: GNBProps) {
   const router = useRouter();
   return (
     <Base>
       <Header>
         <MainMenuWrapper>
-          <LogoWrapper>
-            <span>알약하나</span>
-          </LogoWrapper>
-          <SubMenuWeb>
-            <Menu isSelected={variant === "home"}>홈</Menu>
-            <Menu isSelected={variant === "healthGoal"}>건강목표</Menu>
-            <Menu isSelected={variant === "nutrient"}>영양소</Menu>
-          </SubMenuWeb>
+          <FlexRowBox alignItem="center">
+            <LogoWrapper>
+              <span>알약하나</span>
+            </LogoWrapper>
+            <GNBMenu selectedMenu={router.pathname}></GNBMenu>
+          </FlexRowBox>
 
           <h4>검색 comp</h4>
         </MainMenuWrapper>
-        <AuthWrapper>
+        {/* <AuthWrapper>
           <ButtonText variant="primary" label="로그인"></ButtonText>
           <ButtonText
             variant="default"
             label="회원가입"
             margin="0px 10px"
           ></ButtonText>
-        </AuthWrapper>
+        </AuthWrapper> */}
       </Header>
     </Base>
   );
