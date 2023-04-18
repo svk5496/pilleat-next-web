@@ -3,7 +3,6 @@ import { client } from "@/apollo";
 import GNB from "@/components/molecules/bars/GNB";
 import { css, Global } from "@emotion/react";
 import type { AppProps } from "next/app";
-import { reset } from "./../styles/reset";
 import { ApolloProvider } from "@apollo/client";
 
 const globalStyle = css`
