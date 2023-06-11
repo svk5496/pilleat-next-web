@@ -57,6 +57,7 @@ export const lightTheme: DefaultTheme = {
   primaryLight: primary300,
 
   bgColor: white,
+  bgColorDark: primary100,
 
   borderColor: grayscale400,
   gray: grayscale550,
@@ -87,6 +88,7 @@ export const darkTheme: DefaultTheme = {
   borderColor: "#FDF8F1",
   gray: "#bfbfbf",
   bgColor: black,
+  bgColorDark: primary900,
 
   bgGrayLight: "#F9F9F9",
   bgGray: "#F0F0F0",

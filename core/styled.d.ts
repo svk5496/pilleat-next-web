@@ -15,6 +15,7 @@ export interface DefaultTheme {
   blue: string;
   blueDark: string;
   bgColor: string;
+  bgColorDark: string;
   bgGrayLight: string;
   bgGray: string;
   bgGrayDark: string;
