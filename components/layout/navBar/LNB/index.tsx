@@ -1,12 +1,13 @@
-import { theme } from "@/core/colors/theme";
 import { Breakpoint } from "@/styles/mediaQuery";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-import GNBMenu from "../../menu";
-import { FlexRowBox } from "@/components/atoms/layouts";
+import GNBMenu from "./menu";
+import { theme } from "@/core/colors/theme";
+import { FlexRowBox } from "../../../common/layouts";
 
 const Base = styled.div`
   width: 100%;
+  max-width: 1200px;
   height: 45px;
   display: flex;
   justify-content: center;
@@ -29,7 +30,6 @@ const MainMenuWrapper = styled.div`
   height: 100%;
   display: flex;
   padding: 0px 20px;
-  display: inline-flex;
   justify-content: space-between;
   align-items: center;
 `;
@@ -72,7 +72,6 @@ export default function GNB({ variant = "/" }: GNBProps) {
             </LogoWrapper>
             <GNBMenu selectedMenu={router.pathname}></GNBMenu>
           </FlexRowBox>
-
           <h4>검색 comp</h4>
         </MainMenuWrapper>
         {/* <AuthWrapper>

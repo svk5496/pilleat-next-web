@@ -2,8 +2,8 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import { ButtonIcon } from ".";
-import { lightTheme } from "../../../../core/colors/theme";
+import { ButtonIcon } from "./index";
+import { lightTheme } from "../../../../../core/colors/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 

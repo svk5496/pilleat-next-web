@@ -1,4 +1,4 @@
-import { lightTheme } from "../../../../core/colors/theme";
+import { lightTheme } from "../../../../../core/colors/theme";
 import styled from "@emotion/styled";
 import React, { ReactNode } from "react";
 

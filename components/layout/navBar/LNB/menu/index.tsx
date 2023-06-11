@@ -1,4 +1,4 @@
-import DropDown from "@/components/atoms/DropDown";
+import DropDown from "../../../../common/DropDown";
 import { theme } from "@/core/colors/theme";
 import { Breakpoint } from "@/styles/mediaQuery";
 import styled from "@emotion/styled";
@@ -30,7 +30,7 @@ const Menu = styled.p<MenuProp>`
   width: 60px;
   margin: 0px 10px;
   vertical-align: center;
-  padding: 0 auto;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,7 @@ export default function GNBMenu({ selectedMenu }: GNBMenuProps) {
         <SubMenuWeb>
           {MenuArray.map((menu) => (
             <Menu
+              key={menu.id}
               isSelected={selectedMenu === menu.path}
               onClick={() => handleClick(menu.path)}
             >
