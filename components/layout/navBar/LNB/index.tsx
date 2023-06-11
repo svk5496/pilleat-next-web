@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import GNBMenu from "./menu";
 import { theme } from "@/core/colors/theme";
-import { FlexRowBox } from "../../../common/layouts";
 
 const Base = styled.div`
   width: 100%;
@@ -13,76 +12,67 @@ const Base = styled.div`
   justify-content: center;
   top: 0;
   border-bottom: 1px solid ${theme.lightTheme.borderColor};
-  @media (min-width: ${Breakpoint.mobile}) {
-    height: 60px;
-  }
 `;
 
-const Header = styled.div`
+const SubMenuWeb = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 1300px;
-  display: flex;
-`;
-
-const MainMenuWrapper = styled.div`
-  width: 70%;
-  height: 100%;
-  display: flex;
   padding: 0px 20px;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
 `;
 
-const LogoWrapper = styled.div`
-  width: 100px;
-  height: 40px;
-  background-color: ${theme.lightTheme.primary};
+interface MenuProp {
+  isSelected: boolean;
+}
+
+const Menu = styled.p<MenuProp>`
+  height: 100% - 1px;
+  width: 60px;
+  margin: 0px 10px 0px 0px;
+  vertical-align: center;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  span {
-    color: white;
+  cursor: pointer;
+  color: ${(props) =>
+    props.isSelected ? theme.lightTheme.fontColor : theme.lightTheme.fontGray};
+  font-size: 15px;
+  @media (min-width: ${Breakpoint.mobile}) {
+    font-size: 16px;
+  }
+  border-bottom: 4px solid
+    ${(props) =>
+      props.isSelected ? theme.lightTheme.primary : theme.lightTheme.bgColor};
+  :hover {
+    color: ${theme.lightTheme.primary};
   }
 `;
 
-const AuthWrapper = styled.div`
-  width: 30%;
-  min-width: 220px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const MenuArray = [
+  { id: "1", label: "홈", path: "/" },
+  { id: "2", label: "건강목표", path: "/healthgoal" },
+  { id: "3", label: "영양소", path: "/nutrient" },
+];
 
-interface GNBProps {
-  variant?: string;
-}
-
-export default function GNB({ variant = "/" }: GNBProps) {
+export default function LNB() {
   const router = useRouter();
+  const handleClick = (routes: string) => {
+    router.push(routes);
+  };
   return (
     <Base>
-      <Header>
-        <MainMenuWrapper>
-          <FlexRowBox alignItem="center">
-            <LogoWrapper>
-              <span>알약하나</span>
-            </LogoWrapper>
-            <GNBMenu selectedMenu={router.pathname}></GNBMenu>
-          </FlexRowBox>
-          <h4>검색 comp</h4>
-        </MainMenuWrapper>
-        {/* <AuthWrapper>
-          <ButtonText variant="primary" label="로그인"></ButtonText>
-          <ButtonText
-            variant="default"
-            label="회원가입"
-            margin="0px 10px"
-          ></ButtonText>
-        </AuthWrapper> */}
-      </Header>
+      <SubMenuWeb>
+        {MenuArray.map((menu) => (
+          <Menu
+            key={menu.id}
+            isSelected={router.pathname === menu.path}
+            onClick={() => handleClick(menu.path)}
+          >
+            {menu.label}
+          </Menu>
+        ))}
+      </SubMenuWeb>{" "}
     </Base>
   );
 }

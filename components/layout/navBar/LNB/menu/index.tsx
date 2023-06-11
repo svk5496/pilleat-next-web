@@ -14,36 +14,6 @@ const Base = styled.div`
   }
 `;
 
-const SubMenuWeb = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 0px 20px;
-  display: flex;
-`;
-
-interface MenuProp {
-  isSelected: boolean;
-}
-
-const Menu = styled.p<MenuProp>`
-  height: 100% - 1px;
-  width: 60px;
-  margin: 0px 10px;
-  vertical-align: center;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  border-bottom: 4px solid
-    ${(props) =>
-      props.isSelected ? theme.lightTheme.primary : theme.lightTheme.bgColor};
-  :hover {
-    color: ${theme.lightTheme.primary};
-  }
-`;
-
 const MenuArray = [
   { id: "1", label: "홈", path: "/" },
   { id: "2", label: "건강목표", path: "/healthgoal" },
@@ -55,32 +25,9 @@ interface GNBMenuProps {
 }
 
 export default function GNBMenu({ selectedMenu }: GNBMenuProps) {
-  const router = useRouter();
-  const handleClick = (routes: string) => {
-    router.push(routes);
-  };
-
-  const mobile = useMediaQuery(`(min-width:${Breakpoint.mobile})`);
-
   return (
     <Base>
-      {mobile ? (
-        <SubMenuWeb>
-          {MenuArray.map((menu) => (
-            <Menu
-              key={menu.id}
-              isSelected={selectedMenu === menu.path}
-              onClick={() => handleClick(menu.path)}
-            >
-              {menu.label}
-            </Menu>
-          ))}
-        </SubMenuWeb>
-      ) : (
-        <>
-          <DropDown label="드롭다운" menuItemArray={MenuArray}></DropDown>
-        </>
-      )}
+      <DropDown label="드롭다운" menuItemArray={MenuArray}></DropDown>
     </Base>
   );
 }
