@@ -1,7 +1,7 @@
-import AdminSideBar from "@/components/molecules/bars/AdminSideBar";
-import Seo from "@/components/atoms/Seo";
+import Index from "@/components/layout/navBar/AdminGNB";
+import Seo from "@/components/common/Seo";
 import styled from "@emotion/styled";
-import AdminLayout from "@/components/molecules/layouts/AdminLayout";
+import AdminLayout from "@/components/common/molecules/layouts/AdminLayout";
 
 const Base = styled.div`
   width: 100%;

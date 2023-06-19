@@ -1,4 +1,4 @@
-import AdminLayout from "@/components/molecules/layouts/AdminLayout";
+import AdminLayout from "@/components/common/molecules/layouts/AdminLayout";
 import { gql, useMutation } from "@apollo/client";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";

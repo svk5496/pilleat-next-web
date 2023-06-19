@@ -1,4 +1,4 @@
-import GNB from "@/components/molecules/bars/GNB";
+import GNB from "../../components/layout/navBar/GNB";
 
 export default function HealthGoal() {
   return (
