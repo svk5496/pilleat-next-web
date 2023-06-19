@@ -46,7 +46,7 @@ import {
   alphaWhite54,
   alphaWhite60,
   alphaWhite67,
-} from "./guide";
+} from "./colors/guide";
 import { DefaultTheme } from "./styled";
 
 export const lightTheme: DefaultTheme = {

@@ -16,8 +16,11 @@
     "@emotion/styled": "^11.10.6",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/material": "^5.11.13",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.4",
+    "@mui/styles": "^5.13.2",
     "@storybook/jest": "^0.1.0",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
@@ -28,6 +31,9 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "5.0.2"
   },
   "devDependencies": {
@@ -40,6 +46,7 @@
     "@storybook/nextjs": "^7.0.2",
     "@storybook/react": "^7.0.2",
     "@storybook/testing-library": "^0.1.0",
+    "@types/react-slick": "^0.23.10",
     "babel-loader": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.11",
     "storybook": "^7.0.2"
