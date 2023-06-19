@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import UserLayout from "@/components/common/layouts/UserLayout";
-import AdminLayout from "@/components/common/layouts/AdminLayout";
+import UserLayout from "@/components/layout/UserLayout";
+import AdminLayout from "@/components/layout/AdminLayout";
 
 const LayoutBase = styled.div`
   width: 100%;

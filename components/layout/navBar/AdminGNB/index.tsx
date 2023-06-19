@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 import { useRouter } from "next/router";
-import { FlexRowBox } from "@/components/common/layouts";
+import { FlexRowBox } from "../../../common/flexBox";
 import GNBMenu from "../LNB/menu";
-import { theme } from "@/core/colors/theme";
-import { Breakpoint } from "@/styles/mediaQuery";
+import { theme } from "@/core/theme";
+import { Breakpoint } from "@/core/mediaQuery";
 
 const Base = styled.div`
   width: 100%;

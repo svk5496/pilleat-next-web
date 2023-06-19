@@ -4,7 +4,7 @@ import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 import { ButtonText } from "./Index";
 import userEvent from "@testing-library/user-event";
-import { lightTheme } from "../../../../../core/colors/theme";
+import { lightTheme } from "../../../../core/theme";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

@@ -1,8 +1,9 @@
-import { Breakpoint } from "@/styles/mediaQuery";
+import { Breakpoint } from "@/core/mediaQuery";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import GNBMenu from "./menu";
-import { theme } from "@/core/colors/theme";
+import { theme } from "@/core/theme";
+import { HEALTH_GOAL, HOME, NUTRIENT } from "@/utils/router";
 
 const Base = styled.div`
   width: 100%;
@@ -50,9 +51,9 @@ const Menu = styled.p<MenuProp>`
 `;
 
 const MenuArray = [
-  { id: "1", label: "홈", path: "/" },
-  { id: "2", label: "건강목표", path: "/healthgoal" },
-  { id: "3", label: "영양소", path: "/nutrient" },
+  { id: "1", label: "홈", path: `${HOME}` },
+  { id: "2", label: "건강목표", path: `${HEALTH_GOAL}` },
+  { id: "3", label: "영양소", path: `${NUTRIENT}` },
 ];
 
 export default function LNB() {

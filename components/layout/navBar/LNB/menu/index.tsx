@@ -1,6 +1,6 @@
 import DropDown from "../../../../common/DropDown";
-import { theme } from "@/core/colors/theme";
-import { Breakpoint } from "@/styles/mediaQuery";
+import { theme } from "@/core/theme";
+import { Breakpoint } from "@/core/mediaQuery";
 import styled from "@emotion/styled";
 import { useMediaQuery } from "@mui/material";
 import { useRouter } from "next/router";

@@ -1,4 +1,4 @@
-import { theme } from "@/core/colors/theme";
+import { theme } from "@/core/theme";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import { useState } from "react";

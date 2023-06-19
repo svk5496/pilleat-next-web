@@ -1,8 +1,12 @@
-import { Breakpoint } from "@/styles/mediaQuery";
+import { Breakpoint } from "@/core/mediaQuery";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-import { theme } from "@/core/colors/theme";
-import { FlexRowBox } from "../../../common/layouts";
+import { theme } from "@/core/theme";
+import { FlexRowBox } from "../../../common/flexBox";
+import { css, useTheme } from "@emotion/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons/faMagnifyingGlass";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Base = styled.div`
   width: 100%;
@@ -52,6 +56,10 @@ const Avatar = styled.div`
   background-color: ${theme.lightTheme.bgGrayDark};
   margin-left: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 `;
 
 const Search = styled.div`
@@ -61,6 +69,9 @@ const Search = styled.div`
   background-color: ${theme.lightTheme.bgGrayDark};
   margin-left: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 interface GNBProps {
@@ -79,9 +90,21 @@ export default function GNB({ variant = "/" }: GNBProps) {
             </LogoWrapper>
           </FlexRowBox>
           <FlexRowBox justifyContent="flex-end">
-            <Search>검색 comp</Search>
-            <Avatar></Avatar>
+            <Search>
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                size="lg"
+              ></FontAwesomeIcon>
+            </Search>
+            <Avatar>
+              <FontAwesomeIcon
+                icon={faUser}
+                color="gray"
+                size="2xl"
+              ></FontAwesomeIcon>
+            </Avatar>
           </FlexRowBox>
+          <div></div>
         </MainMenuWrapper>
       </Header>
     </Base>

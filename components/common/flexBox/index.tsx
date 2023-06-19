@@ -21,6 +21,6 @@ FlexRowBox.defaultProps = {
   width: "100%",
   height: "100%",
   flexDirection: "row",
-  alignItem: "",
-  justifyContent: "",
+  alignItem: "center",
+  justifyContent: "center",
 };
