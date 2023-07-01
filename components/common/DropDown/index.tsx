@@ -75,7 +75,11 @@ export default function DropDown({ label, menuItemArray }: DropDownProps) {
       {modal ? (
         <DropDownMenu>
           {menuItemArray.map((menu) => (
-            <MenuItem id={menu.id} onClick={() => menuClick(menu.path)}>
+            <MenuItem
+              key={menu.id}
+              id={menu.id}
+              onClick={() => menuClick(menu.path)}
+            >
               {menu.label}
             </MenuItem>
           ))}

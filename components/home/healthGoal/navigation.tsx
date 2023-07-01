@@ -26,6 +26,8 @@ export const HEALTH_GOAL_ARRAY = [
   { id: 12, healthGoal: "관절건강", icon: <IconJoint></IconJoint> },
 ];
 
+const menu = ["대시보드"];
+
 // 혈압관리
 // 혈당관리
 // 여성건강

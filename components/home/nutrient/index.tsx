@@ -4,6 +4,7 @@ import { Breakpoint } from "@/core/mediaQuery";
 import { useRouter } from "next/router";
 import { HEALTH_GOAL } from "@/utils/router";
 import Sticker from "@/components/common/sticker";
+import Image from "next/image";
 
 const NutrientGoalBase = styled.div`
   width: 100%;
@@ -271,7 +272,10 @@ function NutrientHome() {
           {mockNutrientData.slice(0, 8).map((nutrient, idx) => (
             <NutrientItem key={idx}>
               <NutrientThumbnail>
-                <img src={nutrient.thumbnail} />
+                <Image
+                  src={nutrient.thumbnail}
+                  alt={nutrient.thumbnail}
+                ></Image>
               </NutrientThumbnail>
               <NutrientTextBox>
                 <h4>{nutrient.displayText}</h4>

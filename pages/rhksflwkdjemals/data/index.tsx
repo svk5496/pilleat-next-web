@@ -1,8 +1,8 @@
-import AdminLayout from "@/components/common/molecules/layouts/AdminLayout";
 import { gql, useMutation } from "@apollo/client";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import AdminLayout from "@/components/layout/AdminLayout";
 
 const Base = styled.div`
   width: 100%;
@@ -71,7 +71,7 @@ export default function AdminData() {
   };
 
   return (
-    <AdminLayout>
+    <AdminLayout mode="admin" menu="data">
       <Base>
         <h4>데이터 다운로드</h4>
         <Button

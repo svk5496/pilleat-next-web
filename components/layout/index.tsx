@@ -8,9 +8,9 @@ const LayoutBase = styled.div`
 `;
 
 export interface LayoutProps {
-  mode: string;
-  menu: string;
-  currentPage: string;
+  mode: "user" | "admin";
+  menu: "home" | "healthGoal" | "nutrient" | "data";
+  currentPage?: string;
   children?: React.ReactNode;
 }
 
