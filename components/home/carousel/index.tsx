@@ -1,50 +1,65 @@
 import styled from "@emotion/styled";
 import Slider from "react-slick";
+import { Breakpoint } from "@/core/mediaQuery";
 
-const CarouselWapper = styled.div`
+const CarouselWrapper = styled.div`
   width: 100%;
+  max-width: 1200px;
   height: 300px;
   padding: 20px 0;
+  position: relative;
   overflow: hidden;
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    height: 220px;
+    width: 360px;
+    div {
+      background-color: lightgreen;
+      border-radius: 20px;
+      height: 100%;
+      width: 95%;
+    }
+  }
+  .slick-slider {
+    height: 100%;
+    max-height: 260px;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    .slick-active {
+      button::before {
+      }
+    }
+    button::before {
+    }
+  }
+  @media (min-width: ${Breakpoint.mobile}) {
+    max-height: 440px;
+    height: 440px;
+    .slick-slide {
+      width: 600px;
+      height: 400px;
+    }
+    .slick-slider {
+      height: 100%;
+      max-height: 440px;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 0;
+      .slick-active {
+        button::before {
+        }
+      }
+      button::before {
+      }
+    }
+  }
 `;
 
-const Box1 = styled.div`
-  height: 240px;
-  width: 95%;
-  border-radius: 20px;
-  background-color: #2beead;
-`;
-
-const Box2 = styled.div`
-  height: 240px;
-  width: 95%;
-  border-radius: 20px;
-  background-color: #393767;
-`;
-
-const Box3 = styled.div`
-  height: 240px;
-  width: 95%;
-  border-radius: 20px;
-
-  background-color: #b6c6f2;
-`;
-
-const Box4 = styled.div`
-  height: 240px;
-  width: 95%;
-  border-radius: 20px;
-
-  background-color: #fffd40;
-`;
-
-const Box5 = styled.div`
-  height: 240px;
-  width: 95%;
-  border-radius: 20px;
-
-  background-color: #f8c276;
-`;
+const SliderCard = styled.div``;
 
 export default function CarouselHome() {
   const settings = {
@@ -52,7 +67,6 @@ export default function CarouselHome() {
     dots: true,
     infinite: true,
     centerMode: true,
-    autoPlay: true,
     speed: 800,
     autoplaySpeed: 2000,
     slidesToShow: 1,
@@ -60,24 +74,24 @@ export default function CarouselHome() {
     variableWidth: true,
   };
   return (
-    <CarouselWapper>
+    <CarouselWrapper>
       <Slider {...settings}>
-        <div style={{ display: "flex", justifyContent: "center", width: 360 }}>
-          <Box1></Box1>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", width: 360 }}>
-          <Box2></Box2>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", width: 360 }}>
-          <Box3></Box3>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", width: 360 }}>
-          <Box4></Box4>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", width: 360 }}>
-          <Box5></Box5>
-        </div>
+        <SliderCard>
+          <div></div>
+        </SliderCard>
+        <SliderCard>
+          <div></div>
+        </SliderCard>
+        <SliderCard>
+          <div></div>
+        </SliderCard>
+        <SliderCard>
+          <div></div>
+        </SliderCard>
+        <SliderCard>
+          <div></div>
+        </SliderCard>
       </Slider>
-    </CarouselWapper>
+    </CarouselWrapper>
   );
 }
