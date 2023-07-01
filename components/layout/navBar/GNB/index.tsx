@@ -38,7 +38,7 @@ const MainMenuWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   width: 40px;
-  height: 40px;
+  height: 30px;
   background-color: ${theme.lightTheme.primary};
   display: flex;
   justify-content: center;
@@ -50,8 +50,8 @@ const LogoWrapper = styled.div`
 `;
 
 const Avatar = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   background-color: ${theme.lightTheme.bgGrayDark};
   margin-left: 20px;
@@ -63,8 +63,8 @@ const Avatar = styled.div`
 `;
 
 const Search = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   background-color: ${theme.lightTheme.bgGrayDark};
   margin-left: 20px;
@@ -91,16 +91,13 @@ export default function GNB({ variant = "/" }: GNBProps) {
           </FlexRowBox>
           <FlexRowBox justifyContent="flex-end">
             <Search>
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                size="lg"
-              ></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
             </Search>
             <Avatar>
               <FontAwesomeIcon
                 icon={faUser}
                 color="gray"
-                size="2xl"
+                size="xl"
               ></FontAwesomeIcon>
             </Avatar>
           </FlexRowBox>
