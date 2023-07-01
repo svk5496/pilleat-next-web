@@ -5,6 +5,7 @@ const CarouselWapper = styled.div`
   width: 100%;
   height: 300px;
   padding: 20px 0;
+  overflow: hidden;
 `;
 
 const Box1 = styled.div`

@@ -6,7 +6,6 @@ import Sticker from "@/components/common/sticker";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 const ProductItemBase = styled.div`
   width: 48%;
@@ -155,7 +154,7 @@ function ProductItem({
   return (
     <ProductItemBase>
       <ThumbnailWrapper>
-        <Image src={thumbnail} alt={thumbnail}></Image>
+        <img src={thumbnail}></img>
       </ThumbnailWrapper>
       <ProductTextWrapper>
         <ProductItemTitle>{title}</ProductItemTitle>

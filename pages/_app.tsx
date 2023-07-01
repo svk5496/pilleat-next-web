@@ -17,6 +17,8 @@ const globalStyle = css`
 
   body {
     margin: 0;
+    padding: 0;
+    width: 100vw;
     min-width: 320px;
     font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic",
       sans-serif;

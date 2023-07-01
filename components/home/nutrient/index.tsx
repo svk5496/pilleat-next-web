@@ -275,6 +275,8 @@ function NutrientHome() {
                 <Image
                   src={nutrient.thumbnail}
                   alt={nutrient.thumbnail}
+                  width={180}
+                  height={110}
                 ></Image>
               </NutrientThumbnail>
               <NutrientTextBox>
