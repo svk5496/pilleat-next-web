@@ -9,6 +9,7 @@ const CarouselWrapper = styled.div`
   padding: 20px 0;
   position: relative;
   overflow: hidden;
+  //각각의 카드 컴포넌트
   .slick-slide {
     display: flex;
     justify-content: center;
@@ -21,18 +22,23 @@ const CarouselWrapper = styled.div`
       width: 95%;
     }
   }
+
   .slick-slider {
     height: 100%;
     max-height: 260px;
   }
+  // Dot custom
+
   .slick-dots {
     position: absolute;
     bottom: 0;
     .slick-active {
       button::before {
+        font-size: 10px;
       }
     }
     button::before {
+      font-size: 10px;
     }
   }
   @media (min-width: ${Breakpoint.mobile}) {
@@ -67,8 +73,9 @@ export default function CarouselHome() {
     dots: true,
     infinite: true,
     centerMode: true,
-    speed: 800,
-    autoplaySpeed: 2000,
+    speed: 600,
+    autoplaySpeed: 3000,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
